@@ -3,67 +3,82 @@
 (c) BYU-Idaho - It is an honor code violation to post this
 file completed or uncompleted in a public file sharing site.
 
-**Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or other editor you may be using) to see the formatting, tables, and mathematical formulae.  If you need to write code, first test in a separate file and then copy the code into this document using code fences.  Submit the markdown file (not a pdf) into I-Learn.
+**Instructions**: Answer each question using proper markdown notation as needed.  Use the preview view in Visual Studio Code (or other editor you may be using) to see the formatting, tables, and mathematical formula.  If you need to write code, first test in a separate file and then copy the code into this document using code fences.  Submit the markdown file (not a pdf) into I-Learn.
 
 
 ## Question 1
 
-Put the following Big-O functions in order going from fastest to slowest.  You can use a graphing calculator like [Desmos](https://www.desmos.com/) to compare the different functions.  Included in the list is $O(n \log n)$.  This is different from $O(n)$ and $(\log n)$.  This performance occurs with sorting algorithms which we will see later in the semester.  Put a 1 for the fastest, 2 for the second fastest, and so on with 7 being the slowest for large values of $n$.
+What is the maximum number of steps (worst case) to find something in a sorted list of 1 million items using linear search?
 
-|Big-O Function|Performance Rank (1=fastest, 7=slowest)|
-|:-:|:-:|
-|$O(n^2)$||
-|$O(n)$||
-|$O(n \log n)$||
-|$O(2^n)$||
-|$O(1)$||
-|$O(\log n)$||
-|$O(n!)$||
-
+**Answer**: 
 
 ## Question 2
 
-If you counted the work in a algorithm to be $5n^3+2n^2+n+382$ where $n$ is the number of items in a list that the algorithm is using, what is the simplified Big-O notation for the algorithm?
+What is the maximum number of steps (worst case) to find something in a sorted list of 1 million items using binary search?
 
-Answer: 
+**Answer**: 
 
 ## Question 3
 
-Explain the strengths of an Array versus the strengths of a Doubly Linked List with respect to performance.
+What is the maximum number of steps (worst case) find something in a sorted list of 1 trillion items using binary search?
 
-Answer: 
+**Answer**: 
 
 ## Question 4
 
-Explain why the performance of looking up a value by index in an Array is $O(1)$.
+During class we created the Algorithm Description Document (ADD) for binary search.  Lets modify the problem so that we assume that the list is sorted in descending order (larger values are first).  The name of this modified algorithm, the inputs, and the outputs are already given for you below.  Note that instead of displaying a message that we found the item (like we did in class), we are returning a True or a False. You need to provide the Abstract, Procedure, and Analysis.
 
-Answer:
+**Algorithm Name**:
 
-## Question 5
+Descending Binary Search
 
-What is the Big-O notation for each of the three functions in the following code:
+**Abstract**:
+
+(describe what problem this algorithm solves and the strategy)
+
+**Inputs**:
+
+* data - list of values sorted in descending order
+* target - what we are looking for in the data
+
+**Procedure**:
+
+1. Describe step 1
+2. Describe step 2
+3. Describe step 3
+
+(add more steps as needed)
+
+**Outputs**:
+
+* True if the target was found.
+* False if the target was not found.
+
+**Analysis**:
+
+(describe the maximum number of steps in the worst case)
+
+## Question 5 (10% Bonus Points)
+
+Implement in python the ADD you wrote for the Descending Binary Search using the start code below:
 
 ```python
-def function1(data):
-    for item in data:
-        print(item)
+def descending_binary_search(data, target):
+    # Add Code Here
+    pass
 
-def function2(data):
-    for x in data:
-        for y in data:
-            print(x,y,x*y)
+# Test Code
+data = [88, 72, 61, 59, 44, 36, 29, 18]  # Start with a sorted list in descending order
+print(descending_binary_search(data, 10)) # False
+print(descending_binary_search(data, 18)) # True
+print(descending_binary_search(data, 29)) # True
+print(descending_binary_search(data, 36)) # True
+print(descending_binary_search(data, 44)) # True
+print(descending_binary_search(data, 50)) # False
+print(descending_binary_search(data, 59)) # True
+print(descending_binary_search(data, 61)) # True
+print(descending_binary_search(data, 72)) # True
+print(descending_binary_search(data, 88)) # True
+print(descending_binary_search(data, 99)) # False
 
-def function3(data):
-    first = 0
-    last = len(data)-1
-    while first < last:
-        print("Finding the Middle Again")
-        middle = (first + last) // 2
-        last = middle - 1
 
-```
-
-Answer: 
-* function1 :
-* function2 :
-* function3 :

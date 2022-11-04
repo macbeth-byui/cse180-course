@@ -1,31 +1,29 @@
-# CSE 180 Prepare 02 - Performance & Memory
+# CSE 180 Prepare 02 - Searching & Documenting
 
-When we look at an algorithm, we will always analyze the work that is performed.  We call this work a performance measure.  Performance can be represented either in steps (no units) or actual time (e.g. milliseconds).  We will organize the different types of performance using Big-O notation.
+The first software algorithm that we will look at this semester is a searching algorithm.  Actually, the searching algorithms are not exclusive to just software.  You have probably performed this algorithms countless times manually without a computer.  We will compare two algorithms:
 
-Algorithms frequently need to organize data into computer memory using data structures.  This week we will learn about the two fundamental data structures: array and linked list.  There are other data structures we will see this semester but they are all built on these two foundational structures.  The selection of data structures is important because it will affect the performance as well.  We will look at the Big-O notation for operations (e.g. searching, inserting, deleting) from arrays and linked lists.
+* Linear Search
+* Binary Search
+
+We will also explore how to document an algorithm.  Your reading will include a document created by the United States Department of Defense which defines how a software developer contracting with the United States government should document all algorithms.  The government calls the document an Algorithm Description Document (ADD).  This semester, we will describe our algorithms a little bit less rigoursly.  However, we will identify the following for many of our algorithms (including binary search this week):
+
+* Algorithm Name
+* Abstract - What does the algorithm do?
+* Inputs - What do we require to start with before running the algorithm (the ADD document describes this as the Data Dictionary Variables)
+* Procedure - List the discrete steps written out in english.
+* Outputs - What do we expect after running the algorithm?
+* Analysis - What was the timing performance of the alogirthm?
 
 ## Reading
 
-* Lesson 1 - Remainder of [Chapter 1: Introduction to Algorithms](https://learning.oreilly.com/library/view/grokking-algorithms/9781617292231/OEBPS/Text/kindle_split_007.html) - Big O Notation sub-sections inluding Exercises 1.3, 1.4, 1.5, and 1.6
-* Lesson 2 - [Chapter 2: Selection Sort](https://learning.oreilly.com/library/view/grokking-algorithms/9781617292231/OEBPS/Text/kindle_split_008.html) - How Memory Works and Arrays and Linked Lists sub-sections including Exercises 2.1, 2.2, 2.3, 2.4, and 2.5.
+* Lesson 1 (First class of the week) - [Chapter 1: Introduction to Algorithms](https://learning.oreilly.com/library/view/grokking-algorithms/9781617292231/OEBPS/Text/kindle_split_007.html) - Binary Search sub-sections including Exercises 1.1 and 1.2
+* Lesson 2 (Second class of the week) - [Algorithm Description Document](DI-EDRS-82219.pdf)
 
 Notes about reading:
 
-* The tables comparing Arrays and Linked Lists in the reading are correct but incomplete.  There are scenarios where the performance is better or worse.  Here is a complete table which assumes that the linked list is a double linked list.  A doubly linked list means that we keep track of both the front and the end of the list and we can traverse in both directions.
-
-|Operation|Arrays|Doubly Linked Lists|
-|:-:|:-:|:-:|
-|Reading by Index|$O(1)$|$O(n)$|
-|Searching by Value|$O(n)$|$O(n)$|
-|Inserting|$O(1)$ at the end; otherwise $O(n)$ due to right shift|$O(1)$ at the front or end; otherwise $O(n)$ to find location and $O(1)$ to insert.|
-|Deleting|$O(1)$ at the end; otherwise $O(n)$ due to left shift|$O(1)$ at the front or end; otherwise $O(n)$ to find location and $O(1)$ to insert.
-
-* For exercise 2.1, if we insert at the end, then it will be $O(1)$ for both Arrays and Doubly Linked Lists.  There is a cost if the array is full, but this doesn't affect the final performance over time.  We call this amortized time and you will learn more about that in CSE 381.  So, in the end, both data structures would work equally well.
-* For exercise 2.5, you are comparing the new hybrid data structure with either a **sorted** array and a **sorted** doubly linked list (i.e. refer back to your analysis in the previous exercise for a sorted array).  Here is a modified solution based on our complete table above:
-
-|Operation|Sorted Array|Doubly Linked List|Hybrid Data Structure|
-|:-:|:-:|:-:|:-:|
-|Search|$O(\log n)$ since we can use binary search|$O(n)$|$O(1)$ to lookup based on first the letter and $O(n)$ to search through the names (hopefully fewer, but still $O(n)$)|
-|Insert|$O(n)$ since we have to search for the correct place to insert|$O(n)$ since we have to search for the correct place to insert|$O(1)$ to lookup based on the first letter and $O(1)$ to insert at the end of the doubly linked list.|
+* The code examples in the book use Python 2.  All the examples in class will use Python 3.  The biggest difference is in Python 2 we can print to the screen: `print "hello"` whereas in Python 3 we use parentheses: `print("hello")`.
+* You should complete the exercises in the book as part of your reading and studying time.  The answers are in the back of the book.  You will not submit the work you do on these exercises.
+* The solution to exercises 1.1 and 1.2 are wrong and should be 1 more than the value shown in the book.  We will demonstrate this in class.
+* If you want to see a very big example of an ADD, take a look at the ADD for the [Landsat Calibration Validation](https://www.usgs.gov/media/files/landsat-8-9-calibration-validation-algorithm-description-document) algorithms from the United States Geological Service (USGS).  Obviously you don't have time to read even 1% of this document, but it may be useful to scan through it and look for both discrete algorithm steps and the level of detail presented.
 
 [![Creative Commons License - CC - BY](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
