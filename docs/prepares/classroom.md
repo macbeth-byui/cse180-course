@@ -59,3 +59,17 @@ Completed Code:
 * REPL 5B - https://replit.com/@cmacbeth/CSE180Week5BSolved
 * REPL 5C - https://replit.com/@cmacbeth/CSE180Week5CSolved
 * REPL 5D - https://replit.com/@cmacbeth/CSE180Week5DSolved
+
+## Week 6
+
+Starting Code:
+
+* REPL 6A - https://replit.com/@cmacbeth/CSE180Week6A
+* REPL 6B - https://replit.com/@cmacbeth/CSE180Week6A
+* REPL 6C - https://replit.com/@cmacbeth/CSE180Week6C
+
+Completed Code:
+
+* REPL 6A - https://replit.com/@cmacbeth/CSE180Week6ASolved
+* REPL 6B - https://replit.com/@cmacbeth/CSE180Week6BSolved
+* REPL 6C - https://replit.com/@cmacbeth/CSE180Week6CSolved
