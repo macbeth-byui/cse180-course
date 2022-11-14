@@ -8,7 +8,7 @@ file completed or uncompleted in a public file sharing site.
 
 ## Question 1
 
-Consider the following graph:
+Consider the following directed graph:
 
 ![](prove06.gv.png)
 
