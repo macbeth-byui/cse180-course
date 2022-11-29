@@ -65,7 +65,7 @@ Completed Code:
 Starting Code:
 
 * REPL 6A - https://replit.com/@cmacbeth/CSE180Week6A
-* REPL 6B - https://replit.com/@cmacbeth/CSE180Week6A
+* REPL 6B - https://replit.com/@cmacbeth/CSE180Week6B
 * REPL 6C - https://replit.com/@cmacbeth/CSE180Week6C
 
 Completed Code:
@@ -73,3 +73,13 @@ Completed Code:
 * REPL 6A - https://replit.com/@cmacbeth/CSE180Week6ASolved
 * REPL 6B - https://replit.com/@cmacbeth/CSE180Week6BSolved
 * REPL 6C - https://replit.com/@cmacbeth/CSE180Week6CSolved
+
+## Week 7
+
+Starting Code:
+
+* REPL 7A - https://replit.com/@cmacbeth/CSE180Week7A
+
+Completed Code:
+
+* REPL 7A - https://replit.com/@cmacbeth/CSE180Week7ASolved
